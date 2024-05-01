@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('bg-image.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header h1{
+    text-align: center;
+    color: wheat;
+    background-color: black;
+}
+
+table{
+    width: 100vw;
+    text-align: left;
+}
+table a {
+    text-decoration: none;
+    color: black;
+}
+form{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+.form-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-div input{
+    padding: 5px;
+    width: 30%;
+    outline: none;
+    border: none;
+    background: darkgray;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+form button{
+        border: none;
+        padding: 5px;
+        background: chocolate;
+        color: floralwhite;
+        font-weight: 900;
+        border-radius: 20px;
+}
+
+::placeholder{
+    color: white;
+}
+
+
+table{
+    border: 1px solid white;
+    width: 90vw;
+    margin: auto;
+    background: rgb(196 200 196 / 36%);
+    color: black;
+    font-weight: bolder;
+}
+
+table , th , tbody , thead , tr , td {
+    border: 1px solid black;
+}

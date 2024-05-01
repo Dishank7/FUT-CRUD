@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUT CRUD </title>
+    <link rel="stylesheet" href="../style.css">   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
+</head>
+<body>
+
+    <header>
+        <h1>Football CRUD APP</h1>
+    </header>
+
+    <div class="table-cointainer">
+     
+     <form action="/add" method="post">
+         <div class="form-div">
+            <input type="text" name="name" placeholder="CLUBNAME">
+            <input type="text" name="players" placeholder="PLAYERNAME">
+            <input type="text" name="coach" placeholder="COACHNAME">
+         </div> 
+
+       <button type="submit">ADD TEAM DETAILS</button>
+
+
+     </form>
+ <br><br><br>
+     <table>
+         <thead>
+            <th>CLUBNAME</th>
+            <th>PLAYERNAME</th>
+            <th>COACHNAME</th>
+            <th>Edit</th>
+            <th>Delete</th>
+         </thead>
+         <tbody>
+            <tr>
+            <td>REAL MADRID</td>
+            <td>KROSS , MODRIC , RODRY(demo data)</td>
+            <td>ZIDAN</td>
+            <td><a href="/"><span class="material-symbols-outlined">
+                edit
+                </span></a></td>
+            <td><a href="/"><span class="material-symbols-outlined">
+                delete
+                </span></a></td>       
+            </tr>  
+            
+            <% clubs.forEach((team)=>{ %>
+                  <tr>
+                   <td><%= team.name %></td> 
+                   <td><%= team.players %></td> 
+                   <td><%= team.coach %></td> 
+                    <td><a href="/edit/<%= team._id %>"><span class="material-symbols-outlined">
+                        edit
+                        </span></a></td>
+                    <td><a href="/delete/<%= team._id %>"><span class="material-symbols-outlined">
+                        delete
+                        </span></a></td>
+                  </tr>
+           <% });  %> 
+
+            
+         </tbody>
+     </table>
+      
+    </div>
+    
+
+    <script src="../app.js"></script>
+</body>
+</html>
