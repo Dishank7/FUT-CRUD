@@ -44,7 +44,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 async function main() {
-  await mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+  await mongoose.connect("mongodb+srv://futdb:D.clown.7@futcluster.hmjil7e.mongodb.net/");
   console.log("Connected to MongoDB");
 }
 
