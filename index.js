@@ -46,7 +46,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 async function main() {
-  await mongoose.connect("mongodb+srv://futdb:D.clown.7@futcluster.hmjil7e.mongodb.net/?retryWrites=true&w=majority&appName=FUTcluster");
+  await mongoose.connect(process.env.MONGODB_URI);
   console.log("Connected to MongoDB");
 }
 
