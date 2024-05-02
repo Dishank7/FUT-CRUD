@@ -37,7 +37,7 @@ const homeRoute = require('./routes/home');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = process.env.PORT; // Use process.env.PORT for port provided by Vercel
+const port = process.env.PORT || 3000; // Use process.env.PORT for port provided by Vercel
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
