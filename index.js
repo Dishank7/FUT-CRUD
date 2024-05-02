@@ -30,12 +30,14 @@
 // app.listen(port, () => {
 //   console.log(`Example app listening on port ${port}`)
 // })
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const homeRoute = require('./routes/home');
 const bodyParser = require('body-parser');
+
 const app = express();
-const port = process.env.PORT || 3000; // Use process.env.PORT for port provided by Vercel
+const port = process.env.PORT; // Use process.env.PORT for port provided by Vercel
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -44,7 +46,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 async function main() {
-  await mongoose.connect("mongodb+srv://futdb:D.clown.7@futcluster.hmjil7e.mongodb.net/");
+  await mongoose.connect(process.env.MONGODB_URI);
   console.log("Connected to MongoDB");
 }
 
