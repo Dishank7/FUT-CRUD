@@ -15,12 +15,14 @@
     <div class="table-cointainer">
      
      <form action="/edit/<%= clubs._id %>" method="post">
-          
-        <input type="text" name="name" placeholder="CLUBNAME" value="<%= clubs.name %>">
-       <input type="text" name="players" placeholder="PLAYERNAME"
-       value="<%= clubs.players%>">
-       <input type="text" name="coach" placeholder="COACHNAME"
-       value="<%= clubs.coach%>">
+         <div class="form-div">
+            <input type="text" name="name" placeholder="CLUBNAME" value="<%= clubs.name %>">
+            <input type="text" name="players" placeholder="PLAYERNAME"
+            value="<%= clubs.players%>">
+            <input type="text" name="coach" placeholder="COACHNAME"
+            value="<%= clubs.coach%>">
+         </div> 
+        
 
        <button type="submit">EDIT TEAM DETAILS</button>
 
