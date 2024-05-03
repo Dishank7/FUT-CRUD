@@ -35,6 +35,7 @@ form{
 .form-div{
     display: flex;
     justify-content: space-between;
+    padding: 10px;
 }
 
 .form-div input{
@@ -42,17 +43,22 @@ form{
     width: 30%;
     outline: none;
     border: none;
-    background: darkgray;
-    border: 1px solid white;
+    background: rgb(123, 60, 19);
     border-radius: 5px;
+    
+}
+
+.form-div input::placeholder {
+    opacity: 0.5;
 }
 form button{
         border: none;
-        padding: 5px;
+        padding: 20px;
         background: chocolate;
         color: floralwhite;
         font-weight: 900;
-        border-radius: 20px;
+        border-radius: 10px;
+        margin: auto;
 }
 
 ::placeholder{
